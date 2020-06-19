@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, LinearProgress } from '@material-ui/core';
 
 import { useQuery } from '@apollo/react-hooks';
 import { Post } from './Post';
@@ -11,14 +11,15 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    marginBottom: '2rem',
   },
 }));
 
 export const PostsFeed = () => {
   const { loading, data } = useQuery(POSTS_QUERY);
   const classes = useStyles();
-
-  if (loading) return <div>'Loading'</div>;
+  
+  if (loading) return <LinearProgress />;
 
   return (
     <div className={classes.container}>

@@ -15,7 +15,7 @@ export const Comments = ({ expanded, comments }: CommentsProps) => {
           {comments.map(({ id, content, ownerName }) => (
             <Fragment key={id}>
               <Comment ownerName={ownerName} content={content} />
-              <Divider variant="inset" component="li" />
+              <Divider component="li" />
             </Fragment>
           ))}
         </List>
