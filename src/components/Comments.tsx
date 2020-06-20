@@ -3,7 +3,7 @@ import { Collapse, CardContent, List, Divider } from '@material-ui/core';
 import { CommentSchema } from '../graphql/types';
 import { Comment } from './Comment';
 
-interface CommentsProps {
+export interface CommentsProps {
   expanded: boolean;
   comments: CommentSchema[];
 }

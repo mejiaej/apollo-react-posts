@@ -1,7 +1,7 @@
 import React from 'react';
 import { ListItem, ListItemText } from '@material-ui/core';
 
-interface CommentProps {
+export interface CommentProps {
   ownerName: string;
   content: string;
 }
